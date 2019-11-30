@@ -1,0 +1,258 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_EE512               ICON    DISCARDABLE     "ee512.ICO"
+IDI_SMALL               ICON    DISCARDABLE     "SMALL.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_EE512 MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "Process"
+    BEGIN
+        MENUITEM "&Start",                      ID_START
+        MENUITEM "Pause     Alt+P",             ID_STOP
+        MENUITEM "Resume  Alt+R",               ID_RESUME
+    END
+    POPUP "Scheduler"
+    BEGIN
+        MENUITEM "Round Robin",                 ID_1
+        MENUITEM "Random",                      ID_2
+        MENUITEM "Shortest Queue",              ID_3
+        MENUITEM "Periodically",                ID_4
+    END
+    POPUP "Priority"
+    BEGIN
+        MENUITEM "Idle",                        ID_PRIORITY_ABOVENORMAL
+        MENUITEM "Normal",                      ID_PRIORITY_NORMAL
+        MENUITEM "Highest",                     ID_PRIORITY_HIGHEST
+    END
+    POPUP "Stats"
+    BEGIN
+        MENUITEM "All",                         ID_PLOT_1
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ...",                  IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_EE512 ACCELERATORS MOVEABLE PURE 
+BEGIN
+    "/",            IDM_ABOUT,              ASCII,  ALT, NOINVERT
+    "?",            IDM_ABOUT,              ASCII,  ALT, NOINVERT
+    "P",            ID_STOP,                VIRTKEY, ALT, NOINVERT
+    "R",            ID_RESUME,              VIRTKEY, ALT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  22, 17, 230, 75
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "System"
+BEGIN
+    LTEXT           "ee512 Version 1.0",IDC_STATIC,49,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2002 Cem KARACA",IDC_STATIC,49,20,119,8
+    DEFPUSHBUTTON   "OK",IDOK,195,6,30,11,WS_GROUP
+    LTEXT           "Made for EE-512 Term Project by the association of Dervis Z.Deniz",
+                    IDC_STATIC,5,47,218,8
+    LTEXT           "ckaraca@ieee.org",IDC_STATIC,73,32,60,8,WS_DISABLED
+    CONTROL         129,IDC_STATIC,"Static",SS_BITMAP,5,3,32,41
+END
+
+IDD_LARGE DIALOGEX 0, 0, 325, 177
+STYLE DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "OK",IDC_BUTTON1,280,156,38,14
+    GROUPBOX        "Packets Sent",IDC_STATIC,7,7,57,68
+    GROUPBOX        "Bytes Sent",IDC_STATIC,7,82,57,72
+    GROUPBOX        "Sink1 Packets",IDC_STATIC,75,7,57,68
+    GROUPBOX        "Sink 2 Packets",IDC_STATIC,137,7,57,68
+    GROUPBOX        "Sink 4 Packets",IDC_STATIC,261,7,57,68
+    GROUPBOX        "Sink 1 kBytes",IDC_STATIC,75,81,57,72
+    GROUPBOX        "Sink 2 kBytes",IDC_STATIC,137,81,57,72
+    GROUPBOX        "Sink 4 kBytes",IDC_STATIC,261,81,57,72
+    GROUPBOX        "Sink 3 kBytes",IDC_STATIC,199,81,57,72
+    GROUPBOX        "Sink 3 Packets",IDC_STATIC,199,7,57,68
+    LTEXT           "",IDC_STAT1,13,22,45,15
+    LTEXT           "",IDC_STAT2,13,96,45,15
+    LTEXT           "",IDC_STAT3,81,22,45,15
+    LTEXT           "",IDC_STAT4,143,22,45,15
+    LTEXT           "",IDC_STAT5,205,23,45,15
+    LTEXT           "",IDC_STAT6,265,22,45,15
+    LTEXT           "",IDC_STAT7,81,96,45,15
+    LTEXT           "",IDC_STAT8,141,95,45,15
+    LTEXT           "",IDC_STAT9,205,96,45,15
+    LTEXT           "",IDC_STAT10,265,94,45,15
+    PUSHBUTTON      "Reset",IDC_BUTTON2,236,156,38,14
+    LTEXT           "Lost Packets",IDC_STATIC,81,38,43,9
+    LTEXT           "Lost Packets",IDC_STATIC,143,38,43,9
+    LTEXT           "Lost Packets",IDC_STATIC,206,39,43,9
+    LTEXT           "Lost Packets",IDC_STATIC,267,39,43,9
+    LTEXT           "",IDC_STAT11,81,52,45,15
+    LTEXT           "",IDC_STAT12,142,53,45,15
+    LTEXT           "",IDC_STAT13,206,55,45,15
+    LTEXT           "",IDC_STAT14,267,55,45,15
+    LTEXT           "",IDC_STAT15,81,130,45,15
+    LTEXT           "",IDC_STAT16,142,133,45,15
+    LTEXT           "",IDC_STAT17,205,133,45,15
+    LTEXT           "",IDC_STAT18,267,132,45,15
+    LTEXT           "Lost kByets",IDC_STATIC,85,114,38,8
+    LTEXT           "Lost kByets",IDC_STATIC,147,115,38,8
+    LTEXT           "Lost kByets",IDC_STATIC,209,116,38,8
+    LTEXT           "Lost kByets",IDC_STATIC,268,117,38,8
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""resource.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_LARGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 318
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_APP_TITLE           "ee512"
+    IDC_EE512               "EE512"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Turkish resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_TRK)
+#ifdef _WIN32
+LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+#pragma code_page(1254)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP  DISCARDABLE     "cem.bmp"
+#endif    // Turkish resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
